@@ -1,8 +1,23 @@
 <app-header [currentRoute]="myTitle"></app-header>
-<ul>
-    <li *ngFor="let member of members">aaaa
-        <div>First name</div>
-        <div>{{member.firstName}}</div>
-    </li>
-</ul>
-aaaa
+
+<br>
+<div class="container">
+        <ul class="members">
+            <li *ngFor="let member of members" class="col-sm-6">
+                <div class="member">
+                    <div class="row">
+                        <div class="col-xs-6">First name</div>
+                        <div class="col-xs-6">{{member.firstName}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">Last name</div>
+                        <div class="col-xs-6">{{member.lastName}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">Date of birth</div>
+                        <div class="col-xs-6">{{member.dataOfBirth}}</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+</div>

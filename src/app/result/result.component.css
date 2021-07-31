@@ -1,0 +1,11 @@
+.member {
+    border: 2px solid black;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+ul {
+    padding: 0px;
+}
+li {
+    list-style: none
+}
