@@ -16,10 +16,18 @@ describe('HeaderComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
+
+    component.currentRoute = 'Menu';
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display left nav', () => {
+    const headerElement: HTMLElement = fixture.nativeElement;
+    const p = headerElement.querySelector('.glyphicon-chevron-left')!;
+    expect(p).toBeTruthy();
   });
 });
