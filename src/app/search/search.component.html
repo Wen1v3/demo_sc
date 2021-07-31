@@ -7,7 +7,7 @@
             <input type="text" class="form-control" id="date"
                 required
                 [(ngModel)]="model.date" (ngModelChange)="setState('date')" name="date"
-                #date="ngModel">
+                #date="ngModel" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD MMM YYYY' }">
             <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
                date is required
             </div>
