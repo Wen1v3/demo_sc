@@ -1,1 +1,40 @@
 <app-header [currentRoute]="myTitle"></app-header>
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #searchForm="ngForm">
+        <br>
+        <h4>Service Date</h4>
+        <div class="form-group">
+            <input type="text" class="form-control" id="date"
+                required
+                [(ngModel)]="model.date" (ngModelChange)="setState('date')" name="date"
+                #date="ngModel">
+            <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
+               date is required
+            </div>
+        </div>
+
+        <br>
+        <h4>Search using</h4>
+        <div class="form-group">
+            <label for="policyNumber">policy Number</label>
+            <input type="number" class="form-control" id="policyNumber"
+                required
+                [(ngModel)]="model.policyNumber" (ngModelChange)="setState('policyNumber')" name="policyNumber"
+                #policyNumber="ngModel">
+            <div [hidden]="policyNumber.valid || policyNumber.pristine" class="alert alert-danger">
+                policyNumber is required
+            </div>
+        </div>
+  
+        <div class="form-group">
+            <label for="memberCardNumber">member Card Number</label>
+            <input type="text" class="form-control" id="memberCardNumber"
+                [(ngModel)]="model.memberCardNumber" (ngModelChange)="setState('memberCardNumber')" name="memberCardNumber">
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-success" [disabled]="!searchForm.form.valid">Submit</button>
+            <button type="button" class="btn btn-default pull-right" (click)="searchForm.reset()">Reset</button>
+        </div>
+    </form>
+</div>
