@@ -1,0 +1,19 @@
+<div class="container header">
+    <div class="row">
+        <div class="glyphicon-container pull-left">
+            <div *ngIf="currentRoute === 'Menu'">
+                <a (click)="goBack()">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+            </div>
+            <div *ngIf="currentRoute !== 'Menu'">
+                <a routerLink="/menu">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="text-center"><h3>{{currentRoute}}</h3></div>
+        </div>
+    </div>
+</div>

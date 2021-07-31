@@ -10,6 +10,7 @@ import { MemberService } from '../member.service';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
+  myTitle = "Search Results";
   members: Member[] = [];
   memberCardNumber = "";
   policyNumber = 0;

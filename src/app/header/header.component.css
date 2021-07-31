@@ -1,0 +1,12 @@
+.header {
+    border-bottom: 2px solid black; 
+}
+.header .glyphicon{
+    font-size: 18px;
+    top: 23px;
+    left: 10px;
+    cursor: pointer;
+}
+.header .glyphicon-container{
+    width: 30px;
+}
